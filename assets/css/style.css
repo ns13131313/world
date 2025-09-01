@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
 }
 
+/* Header & Navigation */
 .site-header {
   background: #fff;
   border-bottom: 1px solid #e1e1e1;
@@ -25,6 +26,7 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
 }
 
@@ -47,6 +49,7 @@ body {
   text-decoration: none;
   color: #333;
   padding: 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a.active,
@@ -56,11 +59,13 @@ body {
   border-radius: 4px;
 }
 
+/* Player Container */
 .player-container {
   flex: 1;
   max-width: 600px;
   margin: 2rem auto;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .player-container select,
@@ -69,13 +74,13 @@ body {
   margin-top: 1rem;
 }
 
-.content-page {
-  flex: 1;
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+/* Accessibility helper */
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
 }
 
+/* Responsive Design */
 @media (max-width: 480px) {
   .nav {
     flex-direction: column;
